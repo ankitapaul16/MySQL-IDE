@@ -1,0 +1,10 @@
+<!-- snippet_list.html -->
+{% for snippet in snippets %}
+    <div>
+        <h2>{{ snippet.title }}</h2>
+        <p>{{ snippet.content }}</p>
+        <a href="{% url 'snippets:snippet_detail' snippet.id %}">View</a>
+    </div>
+{% empty %}
+    <p>No snippets available.</p>
+{% endfor %}

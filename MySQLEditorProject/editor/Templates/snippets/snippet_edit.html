@@ -1,0 +1,12 @@
+<!-- snippet_edit.html -->
+<h2>Edit Snippet</h2>
+<form method="post" action="{% url 'snippets:snippet_edit' snippet.id %}">
+    {% csrf_token %}
+    <label for="title">Title:</label>
+    <input type="text" name="title" id="title" value="{{ snippet.title }}">
+    <br>
+    <label for="content">Content:</label>
+    <textarea name="content" id="content" rows="4">{{ snippet.content }}</textarea>
+    <br>
+    <input type="submit" value="Update">
+</form>

@@ -1,0 +1,5 @@
+<!-- snippet_detail.html -->
+<h2>{{ snippet.title }}</h2>
+<p>{{ snippet.content }}</p>
+<a href="{% url 'snippets:snippet_edit' snippet.id %}">Edit</a>
+<a href="{% url 'snippets:snippet_delete' snippet.id %}">Delete</a>

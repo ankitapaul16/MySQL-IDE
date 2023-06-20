@@ -1,0 +1,7 @@
+<h2>MySQL Query Editor</h2>
+<form method="post" action="{% url 'editor:query_form' %}">
+  {% csrf_token %}
+  <textarea name="sql" rows="10" cols="80"></textarea>
+  <br>
+  <input type="submit" value="Execute">
+</form>

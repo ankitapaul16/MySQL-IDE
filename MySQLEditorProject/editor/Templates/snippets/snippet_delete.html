@@ -1,0 +1,7 @@
+<!-- snippet_delete.html -->
+<h2>Delete Snippet</h2>
+<p>Are you sure you want to delete the snippet "{{ snippet.title }}"?</p>
+<form method="post" action="{% url 'snippets:snippet_delete' snippet.id %}">
+    {% csrf_token %}
+    <input type="submit" value="Delete">
+</form>
